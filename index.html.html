@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>DataScan v3.7</title>
+
+<style>
+body {
+  background-color: black;
+  color: #00ff00;
+  font-family: monospace;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+input, button {
+  background-color: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 6px;
+  font-family: monospace;
+}
+
+button {
+  cursor: pointer;
+}
+
+#output {
+  margin-top: 20px;
+  white-space: pre-line;
+}
+</style>
+</head>
+
+<body>
+
+<h2>DataScan v3.7 — Social Analyzer</h2>
+
+<p>Ingrese usuario:</p>
+<input id="user" placeholder="liamvrly">
+<button onclick="scan()">ESCANEAR</button>
+
+<div id="output"></div>
+
+<script>
+function scan() {
+  let u = document.getElementById("user").value;
+  let o = document.getElementById("output");
+
+  o.innerText =
+    "Iniciando módulo de rastreo...\n" +
+    "Conectando a servidores remotos...\n" +
+    "Buscando usuario: " + u + "\n" +
+    "Analizando actividad...\n" +
+    "Extrayendo metadatos...\n" +
+    "Verificando seguridad...\n\n" +
+    "=== RESULTADOS ===\n" +
+    "Usuario: " + u + "\n" +
+    "Estado: ACTIVO\n" +
+    "Cuenta detectada: Sí\n" +
+    "Dispositivo principal: IOS\n" +
+    "Última conexión: Hoy\n" +
+    "Nivel de seguridad: BAJO\n\n" +
+    "Arrecife 109, Geovillas del Puerto, 91777 Veracruz, Ver.";
+}
+</script>
+
+</body>
+</html>
